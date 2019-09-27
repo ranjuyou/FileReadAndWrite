@@ -34,11 +34,11 @@
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.tpRead = new System.Windows.Forms.TabPage();
-            this.tpWrite = new System.Windows.Forms.TabPage();
             this.txtReadText = new System.Windows.Forms.TextBox();
             this.btnReadText = new System.Windows.Forms.Button();
             this.btnReadFileSelect = new System.Windows.Forms.Button();
             this.txtReadFile = new System.Windows.Forms.TextBox();
+            this.tpWrite = new System.Windows.Forms.TabPage();
             this.txtWriteText = new System.Windows.Forms.TextBox();
             this.btnWriteText = new System.Windows.Forms.Button();
             this.btnWriteFileSelect = new System.Windows.Forms.Button();
@@ -100,20 +100,6 @@
             this.tpRead.Text = "파일 읽기";
             this.tpRead.UseVisualStyleBackColor = true;
             // 
-            // tpWrite
-            // 
-            this.tpWrite.Controls.Add(this.txtWriteText);
-            this.tpWrite.Controls.Add(this.btnWriteText);
-            this.tpWrite.Controls.Add(this.btnWriteFileSelect);
-            this.tpWrite.Controls.Add(this.txtWriteFile);
-            this.tpWrite.Location = new System.Drawing.Point(4, 22);
-            this.tpWrite.Name = "tpWrite";
-            this.tpWrite.Padding = new System.Windows.Forms.Padding(3);
-            this.tpWrite.Size = new System.Drawing.Size(370, 236);
-            this.tpWrite.TabIndex = 1;
-            this.tpWrite.Text = "파일 쓰기";
-            this.tpWrite.UseVisualStyleBackColor = true;
-            // 
             // txtReadText
             // 
             this.txtReadText.Location = new System.Drawing.Point(6, 32);
@@ -132,6 +118,7 @@
             this.btnReadText.TabIndex = 6;
             this.btnReadText.Text = "불러오기";
             this.btnReadText.UseVisualStyleBackColor = true;
+            this.btnReadText.Click += new System.EventHandler(this.BtnReadText_Click);
             // 
             // btnReadFileSelect
             // 
@@ -141,6 +128,7 @@
             this.btnReadFileSelect.TabIndex = 5;
             this.btnReadFileSelect.Text = "파일 선택";
             this.btnReadFileSelect.UseVisualStyleBackColor = true;
+            this.btnReadFileSelect.Click += new System.EventHandler(this.BtnReadFileSelect_Click);
             // 
             // txtReadFile
             // 
@@ -149,6 +137,20 @@
             this.txtReadFile.ReadOnly = true;
             this.txtReadFile.Size = new System.Drawing.Size(214, 21);
             this.txtReadFile.TabIndex = 4;
+            // 
+            // tpWrite
+            // 
+            this.tpWrite.Controls.Add(this.txtWriteText);
+            this.tpWrite.Controls.Add(this.btnWriteText);
+            this.tpWrite.Controls.Add(this.btnWriteFileSelect);
+            this.tpWrite.Controls.Add(this.txtWriteFile);
+            this.tpWrite.Location = new System.Drawing.Point(4, 22);
+            this.tpWrite.Name = "tpWrite";
+            this.tpWrite.Padding = new System.Windows.Forms.Padding(3);
+            this.tpWrite.Size = new System.Drawing.Size(370, 236);
+            this.tpWrite.TabIndex = 1;
+            this.tpWrite.Text = "파일 쓰기";
+            this.tpWrite.UseVisualStyleBackColor = true;
             // 
             // txtWriteText
             // 
@@ -167,6 +169,7 @@
             this.btnWriteText.TabIndex = 6;
             this.btnWriteText.Text = "저장하기";
             this.btnWriteText.UseVisualStyleBackColor = true;
+            this.btnWriteText.Click += new System.EventHandler(this.BtnWriteText_Click);
             // 
             // btnWriteFileSelect
             // 
@@ -176,6 +179,7 @@
             this.btnWriteFileSelect.TabIndex = 5;
             this.btnWriteFileSelect.Text = "파일 선택";
             this.btnWriteFileSelect.UseVisualStyleBackColor = true;
+            this.btnWriteFileSelect.Click += new System.EventHandler(this.BtnWriteFileSelect_Click);
             // 
             // txtWriteFile
             // 
